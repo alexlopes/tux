@@ -1,0 +1,42 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "debian/stretch64"
+
+  config.vm.boot_timeout = 300
+
+  config.vm.network "forwarded_port", guest: 80, host: 8086
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
+  config.vm.network "forwarded_port", guest: 8100, host: 8100
+  config.vm.network "forwarded_port", guest: 8200, host: 8200
+  config.vm.network "forwarded_port", guest: 8300, host: 8300
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 5000, host: 5000
+  config.vm.network "forwarded_port", guest: 9600, host: 9600
+  config.vm.network "forwarded_port", guest: 5601, host: 5601
+  config.vm.network "forwarded_port", guest: 12201, host: 12201
+  config.vm.network "forwarded_port", guest: 6379, host: 6379
+  config.vm.network "forwarded_port", guest: 15672, host: 15672
+  
+  config.vm.synced_folder "C:/dev", "/home/vagrant/dev"
+  config.vm.synced_folder "C:/share", "/home/vagrant/share"  
+
+
+  config.vm.provision "shell", env: {"DOCKER_REGISTRY_HOSTNAME" => ENV["DOCKER_REGISTRY_HOSTNAME"], 
+                                     "DOCKER_REGISTRY_IP" => ENV["DOCKER_REGISTRY_IP"] ,
+                                     "SSH_USER" => ENV["SSH_USER"] ,
+                                     "SSH_PASS" => ENV["SSH_PASS"],
+                                     "GITHUB_USER" => ENV["GITHUB_USER"],
+                                     "GHE_ENTERPRISE_ADDR" => ENV["GHE_ENTERPRISE_ADDR"],
+                                     "GHE_ENTERPRISE_USER" => ENV["GHE_ENTERPRISE_USER"],
+                                     "GHE_TOKEN" => ENV["GHE_TOKEN"]  }, 
+                               path: "provision.sh",
+                               privileged: false
+  
+end
