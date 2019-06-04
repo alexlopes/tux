@@ -23,10 +23,11 @@ No início do arquivo [provision.sh](https://github.houston.entsvcs.net/alex-lop
 
 - [Vagrant](https://www.vagrantup.com/downloads.html) + [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (últimas versões)
 - ``` vagrant plugin install vagrant-proxyconf```
+- Criar no Widnwos os diretórios `C:/dev` e `C:/share`
 
 ### Caso deseje a instalação full 
 
-- Você deve possuir as variáveis de ambiente abaixo setadas na máquina host:
+- Você deve possuir as variáveis de ambiente abaixo setadas na máquina host, caso não use deixe valor default:
 
 Linux / Git Bash env
 ```
@@ -54,7 +55,7 @@ set GHE_ENTERPRISE_USER="<github enterprise user>"
 set GHE_TOKEN="<github enterprise token>"
 ```
 
-- Deve ter as chaves ssh (publica/privada) compactadas no formato e caminho abaixo abaixo:
+- Deve ter as chaves ssh (publica/privada) compactadas no formato e caminho abaixo abaixo (onde ~/dev/ equivale a C:/dev no Windows):
 
 ```
 ~/dev/keys/github_ssh.tar.gz

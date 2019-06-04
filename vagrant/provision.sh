@@ -184,7 +184,7 @@ install_env_defs (){
 
 # BEGIN
 
-#initial_setup
+initial_setup
 
 if [ $INSTALL_GO = 1 ]; then
   install_go
