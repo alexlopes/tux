@@ -78,6 +78,6 @@ set GHE_TOKEN="<github enterprise token>"
 
 ### Opcional Vagrantfile
 
-- No arquivo Vagrantfile [aqui](https://github.dxc.com/alopes6/tux/blob/master/vagrant/Vagrantfile#L32) existem dois diretórios pré-definidos para compartilhamento com a máquina host. Sinta-se a vontade para alterá-las.
+- No arquivo Vagrantfile [aqui](https://github.com/alexlopes/tux/blob/master/vagrant/Vagrantfile#L32) existem dois diretórios pré-definidos para compartilhamento com a máquina host. Sinta-se a vontade para alterá-las.
 
-- Também existem alguns direcionamentos de portas pré-definidas [aqui](https://github.dxc.com/alopes6/tux/blob/master/vagrant/Vagrantfile#L32). Sinta-se a vontade para alterá-las.
+- Também existem alguns direcionamentos de portas pré-definidas [aqui](https://github.com/alexlopes/tux/blob/master/vagrant/Vagrantfile#L32). Sinta-se a vontade para alterá-las.
