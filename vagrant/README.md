@@ -23,7 +23,7 @@ No início do arquivo [provision.sh](https://github.houston.entsvcs.net/alex-lop
 
 - [Vagrant](https://www.vagrantup.com/downloads.html) + [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (últimas versões)
 - ``` vagrant plugin install vagrant-proxyconf```
-- Criar no Widnwos os diretórios `C:/dev` e `C:/share`
+- Criar no Windows os diretórios `C:/dev` e `C:/share`
 
 ### Caso deseje a instalação full 
 
